@@ -1,7 +1,7 @@
-﻿using domain;
+﻿using domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace infrastructure
+namespace infrastructure.Persistence
 {
     public class DatabaseContext : DbContext
     {

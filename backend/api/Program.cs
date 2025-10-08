@@ -1,3 +1,4 @@
+using api.Middleware;
 using application.DTOs;
 using application.Helpers.Config;
 using application.Interfaces.Repositories;
@@ -7,9 +8,16 @@ using application.Services;
 using application.Validation;
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using infrastructure;
-using infrastructure.Repositories;
+using infrastructure.Logging;
+using infrastructure.Persistence;
+using infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Formatting.Json;
+using Serilog.Sinks.Elasticsearch;
+
+//Logueo de errores internos de Elastic
+Serilog.Debugging.SelfLog.Enable(msg => Console.WriteLine($"[Serilog] {msg}"));
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +39,34 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IValidator<CreateEmployeeDto>, CreateEmployeeDtoValidator>();
 
+builder.Services.Configure<ElasticLoggingSettings>(builder.Configuration.GetSection("ElasticLogging"));
+
+var elasticSettings = builder.Configuration
+    .GetSection("ElasticLogging")
+    .Get<ElasticLoggingSettings>();
+
+var loggerConfig = new LoggerConfiguration()
+    .Enrich.FromLogContext();
+
+if (builder.Environment.IsDevelopment())
+{
+    loggerConfig.WriteTo.Console();
+}
+
+if (elasticSettings.Enabled)
+{
+    loggerConfig.WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(elasticSettings.Uri))
+    {
+        AutoRegisterTemplate = true,
+        IndexFormat = elasticSettings.IndexFormat,
+        CustomFormatter = new JsonFormatter()
+    });
+}
+
+Log.Logger = loggerConfig.CreateLogger();
+builder.Host.UseSerilog();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +75,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<EndpointLoggingMiddleware>();
 
 app.UseHttpsRedirection();
 

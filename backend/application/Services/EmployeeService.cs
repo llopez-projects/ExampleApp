@@ -5,7 +5,7 @@ using application.Helpers.Constants;
 using application.Interfaces.Repositories;
 using application.Interfaces.Services;
 using AutoMapper;
-using domain;
+using domain.Entities;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 

@@ -1,4 +1,4 @@
-﻿namespace domain
+﻿namespace domain.Entities
 {
     public class Employee
     {

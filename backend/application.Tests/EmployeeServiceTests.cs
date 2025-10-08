@@ -3,7 +3,7 @@ using application.Interfaces.Repositories;
 using application.Mapping;
 using application.Services;
 using AutoMapper;
-using domain;
+using domain.Entities;
 using FluentAssertions;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;

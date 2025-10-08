@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Passw0rd"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+
+  sql-init:
+    image: mcr.microsoft.com/mssql-tools
+    container_name: sql-init
+    depends_on:
+      - sqlserver
+    entrypoint: >
+      /bin/bash -c "
+        sleep 10 &&
+        /opt/mssql-tools/bin/sqlcmd -S sqlserver -U SA -P Passw0rd -i /init/create-schema.sql
+      "
+    volumes:
+      - ./database:/init
+    restart: on-failure
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.transport.ssl.enabled=false
+    ports:
+      - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - xpack.security.enabled=false
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5601/api/status || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kibana_setup:
+    image: curlimages/curl:latest
+    container_name: kibana_setup
+    depends_on:
+      - kibana
+    entrypoint: >
+      /bin/sh -c "sleep 360 && curl -X POST http://kibana:5601/api/saved_objects/index-pattern -H 'kbn-xsrf: true' -H 'Content-Type: application/json' --data '{\"attributes\": {\"title\": \"exampleapp-endpoints\", \"timeFieldName\": \"@timestamp\"}}'"
+    restart: on-failure
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/api/Dockerfile
+    container_name: exampleapp-api
+    ports:
+      - "5026:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=ExampleApp;User Id=sa;Password=Passw0rd;Encrypt=False;TrustServerCertificate=True;
+      - ElasticLogging__Enabled=true
+      - ElasticLogging__Uri=http://elasticsearch:9200
+      - ElasticLogging__IndexFormat=exampleapp-endpoints
+      - ElasticLogging__ApplicationName=ExampleApp
+    depends_on:
+      - sqlserver
+      - elasticsearch
+    command: >
+      /bin/sh -c "sleep 240 && dotnet api.dll"
+    restart: on-failure
+
+volumes:
+  sqlserverdata:
+    name: exampleapp_sql_data
+  esdata:
+    name: exampleapp_es_data

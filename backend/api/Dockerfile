@@ -1,21 +1,28 @@
 # Imagen base oficial de .NET
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 
 # Imagen para compilar
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copiar solución y restaurar paquetes
-COPY ["api/api.csproj", "api/"]
-COPY ["application/application.csproj", "application/"]
-COPY ["infrastructure/infrastructure.csproj", "infrastructure/"]
-COPY ["domain/domain.csproj", "domain/"]
+COPY ["backend/api/api.csproj", "api/"]
+COPY ["backend/application/application.csproj", "application/"]
+COPY ["backend/infrastructure/infrastructure.csproj", "infrastructure/"]
+COPY ["backend/domain/domain.csproj", "domain/"]
+
+# Restaurar paquetes
 RUN dotnet restore "api/api.csproj"
 
+# Copiar todo el código
+COPY backend/api/ api/
+COPY backend/application/ application/
+COPY backend/infrastructure/ infrastructure/
+COPY backend/domain/ domain/
+
 # Compilar y publicar
-COPY . .
 WORKDIR "/src/api"
 RUN dotnet publish "api.csproj" -c Release -o /app/publish
 

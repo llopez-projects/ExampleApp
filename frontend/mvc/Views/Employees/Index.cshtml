@@ -1,0 +1,32 @@
+﻿@using core.DTOs
+@model List<EmployeeDto>
+
+<h2>Listado de empleados</h2>
+
+<a asp-controller="Employees" asp-action="Create" class="btn btn-success mb-3">Nuevo usuario</a>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Departamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.FullName</td>
+                <td>@employee.DepartmentName</td>
+                <td class="text-center">
+                    <a asp-controller="Employees" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-sm btn-info me-1">Ver</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.Partial("_ToastrMessages")

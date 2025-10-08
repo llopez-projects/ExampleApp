@@ -1,0 +1,17 @@
+﻿@using core.DTOs
+@model EmployeeDto
+
+@{
+    ViewData["Title"] = "Detalles del empleado";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.FullName</h5>
+        <p class="card-text"><strong>Email:</strong> @Model.Email</p>
+        <p class="card-text"><strong>Cargo:</strong> @Model.DepartmentName</p>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</div>

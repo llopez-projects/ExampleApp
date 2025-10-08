@@ -1,0 +1,24 @@
+﻿@if (TempData["SuccessMessage"] != null || TempData["ErrorMessage"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            toastr.options = {
+                closeButton: true,
+                progressBar: true,
+                positionClass: "toast-bottom-right",
+                timeOut: "4000"
+            };
+
+            const success = "@TempData["SuccessMessage"]";
+            const error = "@TempData["ErrorMessage"]";
+
+            if (success && success !== "") {
+                toastr.success(success);
+            }
+
+            if (error && error !== "") {
+                toastr.error(error);
+            }
+        });
+    </script>
+}

@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A927F84-3A41-483F-9DF1-E536878AA520}|application.Tests\\application.Tests.csproj|c:\\users\\lopez\\downloads\\exampleapplocal\\backend\\application.tests\\employeeservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A927F84-3A41-483F-9DF1-E536878AA520}|application.Tests\\application.Tests.csproj|solutionrelative:application.tests\\employeeservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9637AE4B-BFCC-4BE5-9A8D-DF155F0E2B35}|infrastructure.tests\\infrastructure.Tests.csproj|c:\\users\\lopez\\downloads\\exampleapplocal\\backend\\infrastructure.tests\\employeerepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9637AE4B-BFCC-4BE5-9A8D-DF155F0E2B35}|infrastructure.tests\\infrastructure.Tests.csproj|solutionrelative:infrastructure.tests\\employeerepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0609A7-3476-4A09-9DEB-42D014AB6921}|api\\api.csproj|c:\\users\\lopez\\downloads\\exampleapplocal\\backend\\api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0609A7-3476-4A09-9DEB-42D014AB6921}|api\\api.csproj|solutionrelative:api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CD9018A-5559-4EE8-95EA-47D618F3997D}|infrastructure\\infrastructure.csproj|c:\\users\\lopez\\downloads\\exampleapplocal\\backend\\infrastructure\\repositories\\employeerepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CD9018A-5559-4EE8-95EA-47D618F3997D}|infrastructure\\infrastructure.csproj|solutionrelative:infrastructure\\repositories\\employeerepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0A9F8C7-AC4F-4AB8-BC6A-56C5BBEBCCAA}|domain\\domain.csproj|c:\\users\\lopez\\downloads\\exampleapplocal\\backend\\domain\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0A9F8C7-AC4F-4AB8-BC6A-56C5BBEBCCAA}|domain\\domain.csproj|solutionrelative:domain\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0A9F8C7-AC4F-4AB8-BC6A-56C5BBEBCCAA}|domain\\domain.csproj|c:\\users\\lopez\\downloads\\exampleapplocal\\backend\\domain\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0A9F8C7-AC4F-4AB8-BC6A-56C5BBEBCCAA}|domain\\domain.csproj|solutionrelative:domain\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\application.Tests\\EmployeeServiceTests.cs",
+              "RelativeDocumentMoniker": "application.Tests\\EmployeeServiceTests.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\application.Tests\\EmployeeServiceTests.cs",
+              "RelativeToolTip": "application.Tests\\EmployeeServiceTests.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T03:24:04.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\infrastructure.tests\\EmployeeRepositoryTests.cs",
+              "RelativeDocumentMoniker": "infrastructure.tests\\EmployeeRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\infrastructure.tests\\EmployeeRepositoryTests.cs",
+              "RelativeToolTip": "infrastructure.tests\\EmployeeRepositoryTests.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T03:23:57.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\api\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "api\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\api\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "api\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T18:41:27.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeRepository .cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\infrastructure\\Repositories\\EmployeeRepository .cs",
+              "RelativeDocumentMoniker": "infrastructure\\Repositories\\EmployeeRepository .cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\infrastructure\\Repositories\\EmployeeRepository .cs",
+              "RelativeToolTip": "infrastructure\\Repositories\\EmployeeRepository .cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T18:40:39.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\domain\\Employee.cs",
+              "RelativeDocumentMoniker": "domain\\Employee.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\domain\\Employee.cs",
+              "RelativeToolTip": "domain\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T18:40:32.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\domain\\Department.cs",
+              "RelativeDocumentMoniker": "domain\\Department.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleAppLocal\\backend\\domain\\Department.cs",
+              "RelativeToolTip": "domain\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T18:40:27.061Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

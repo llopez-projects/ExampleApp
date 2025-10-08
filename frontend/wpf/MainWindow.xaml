@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:wpf"
         mc:Ignorable="d"
         Title="ExampleApp" Height="450" Width="800"
-        Background="#1E1E1E" Foreground="White">
+        Background="#1E1E1E" Foreground="White"
+        Loaded="Window_Loaded">
 
     <Window.Resources>
         <Style TargetType="TextBox">
@@ -37,11 +38,8 @@
 
         <!-- Formulario de alta -->
         <StackPanel Grid.Column="0" Margin="0,0,10,0">
-            <TextBlock Text="Nombre:" />
-            <TextBox x:Name="txtFirstName" Margin="0,5" />
-            
-            <TextBlock Text="Apellido:" />
-            <TextBox x:Name="txtLastName" Margin="0,5" />
+            <TextBlock Text="Nombre y apellido:" />
+            <TextBox x:Name="txtFullName" Margin="0,5" />  
             
             <TextBlock Text="Email:" />
             <TextBox x:Name="txtEmail" Margin="0,5" /> 
@@ -51,8 +49,7 @@
 
             <TextBlock Text="Departmento:" />
             <TextBox x:Name="txtDepartment" Margin="0,5" />
-
-            <Button Content="Guardar" Click="Guardar_Click" Margin="0,10" />
+            
         </StackPanel>
 
         <!-- Separador -->

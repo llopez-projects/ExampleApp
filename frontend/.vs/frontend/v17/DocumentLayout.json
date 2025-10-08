@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB153EC8-35B1-4D2D-820D-C26B9B7889F4}|mvc\\mvc.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BB153EC8-35B1-4D2D-820D-C26B9B7889F4}|mvc\\mvc.csproj|solutionrelative:mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{DD86A42A-F862-4B0B-9804-722B0B537015}|core\\core.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD86A42A-F862-4B0B-9804-722B0B537015}|core\\core.csproj|solutionrelative:core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|solutionrelative:wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|solutionrelative:wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|solutionrelative:wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +35,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\mvc\\appsettings.json",
-              "RelativeDocumentMoniker": "mvc\\appsettings.json",
-              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\mvc\\appsettings.json",
-              "RelativeToolTip": "mvc\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-08T04:16:57.742Z",
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\core\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "core\\Services\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\core\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "core\\Services\\EmployeeService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAvwBUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T11:39:33.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\App.xaml.cs",
+              "RelativeDocumentMoniker": "wpf\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\App.xaml.cs",
+              "RelativeToolTip": "wpf\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T11:35:51.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "wpf\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml",
+              "RelativeToolTip": "wpf\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-08T11:09:08.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "wpf\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml.cs",
+              "RelativeToolTip": "wpf\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T11:06:29.399Z",
               "EditorCaption": ""
             }
           ]

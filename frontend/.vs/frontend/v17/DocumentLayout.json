@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DD86A42A-F862-4B0B-9804-722B0B537015}|core\\core.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD86A42A-F862-4B0B-9804-722B0B537015}|core\\core.csproj|solutionrelative:core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|solutionrelative:wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|solutionrelative:wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|c:\\users\\lopez\\downloads\\exampleapp\\frontend\\wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FD0834A-EAF9-464B-9294-8C04C2E70F6D}|wpf\\wpf.csproj|solutionrelative:wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,62 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\core\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "core\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\core\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "core\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAvwBUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T11:39:33.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\App.xaml.cs",
-              "RelativeDocumentMoniker": "wpf\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\App.xaml.cs",
-              "RelativeToolTip": "wpf\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T11:35:51.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "wpf\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml",
-              "RelativeToolTip": "wpf\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-08T11:09:08.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "wpf\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\lopez\\Downloads\\ExampleApp\\frontend\\wpf\\MainWindow.xaml.cs",
-              "RelativeToolTip": "wpf\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T11:06:29.399Z",
-              "EditorCaption": ""
             }
           ]
         },

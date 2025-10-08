@@ -1,4 +1,3 @@
-using api.Middleware;
 using application.DTOs;
 using application.Helpers.Config;
 using application.Interfaces.Repositories;
@@ -33,8 +32,6 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IValidator<CreateEmployeeDto>, CreateEmployeeDtoValidator>();
 
 var app = builder.Build();
-
-app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

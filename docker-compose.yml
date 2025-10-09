@@ -89,6 +89,20 @@ services:
       /bin/sh -c "sleep 240 && dotnet api.dll"
     restart: on-failure
 
+  mvc:
+    build:
+      context: .
+      dockerfile: frontend/mvc/Dockerfile
+    container_name: exampleapp-mvc
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Api__BaseUrl=http://api:8080
+    depends_on:
+      - api
+
+
 volumes:
   sqlserverdata:
     name: exampleapp_sql_data

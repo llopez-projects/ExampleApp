@@ -1,0 +1,143 @@
+﻿@rendermode InteractiveServer
+@page "/employees"
+@using core.DTOs
+@using core.Interfaces
+@inject IEmployeeService EmployeeService
+
+<h3>👥 Gestión de Empleados</h3>
+
+<div class="card mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <strong>➕ Alta de nuevo empleado</strong>
+        <button class="btn btn-sm btn-outline-secondary" @onclick="ToggleForm">
+            @(showForm ? "Ocultar" : "Mostrar")
+        </button>
+    </div>
+
+    @if (showForm)
+    {
+        <div class="card-body">
+            <EditForm Model="@newEmployee" OnValidSubmit="CreateEmployee">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label>Nombre:</label>
+                    <InputText @bind-Value="newEmployee.FirstName" class="form-control" />
+                    <ValidationMessage For="@(() => newEmployee.FirstName)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Apellido:</label>
+                    <InputText @bind-Value="newEmployee.LastName" class="form-control" />
+                    <ValidationMessage For="@(() => newEmployee.LastName)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Email:</label>
+                    <InputText @bind-Value="newEmployee.Email" class="form-control" />
+                    <ValidationMessage For="@(() => newEmployee.Email)" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Departamento:</label>
+                    <InputSelect @bind-Value="newEmployee.DepartmentId" class="form-select">
+                        <option selected="selected" value="0">-- Seleccione --</option>
+                        @foreach (var department in departments)
+                        {
+                            <option value="@department.Id">@department.Name</option>
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(() => newEmployee.DepartmentId)" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </EditForm>
+        </div>
+    }
+</div>
+
+<hr />
+
+<h4>📋 Empleados registrados</h4>
+
+@if (employees == null)
+{
+    <p>Cargando empleados...</p>
+}
+else if (!employees.Any())
+{
+    <p>No hay empleados registrados.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in employees)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.FullName</td>
+                    <td>@employee.DepartmentName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<EmployeeDto>? employees;
+    private CreateEmployeeDto newEmployee = new()
+    {
+        DepartmentId = 0
+    };
+    private List<DepartmentDto> departments = new();
+    private bool showForm = false;
+
+    private void ToggleForm()
+    {
+        showForm = !showForm;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {       
+        departments = GetDepartments();
+        await GetAll();
+    }
+
+    private async Task GetAll()
+    {
+        employees = (await EmployeeService.GetAllAsync()).ToList();
+    }
+
+    private async Task CreateEmployee()
+    {
+        var exito = await EmployeeService.CreateAsync(newEmployee);
+        if (exito)
+        {
+            newEmployee = new();
+            await GetAll();
+        }
+        else
+        {
+            
+        }
+    }
+
+    private List<DepartmentDto> GetDepartments()
+    {
+        return new List<DepartmentDto>
+        {
+            new DepartmentDto { Id = 1, Name = "Tecnología" },
+            new DepartmentDto { Id = 2, Name = "Recursos Humanos" },
+            new DepartmentDto { Id = 3, Name = "Finanzas" }
+        };
+    }
+}

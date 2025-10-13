@@ -61,11 +61,20 @@
 
 <h4>📋 Empleados registrados</h4>
 
-@if (employees == null)
+@if (isLoading)
 {
-    <p>Cargando empleados...</p>
+    <div class="text-center">
+        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+            <span class="sr-only"></span>
+        </div>
+        <p>Cargando empleados...</p>
+    </div>
 }
-else if (!employees.Any())
+else if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+else if (employees?.Any() != true)
 {
     <p>No hay empleados registrados.</p>
 }
@@ -92,14 +101,15 @@ else
     </table>
 }
 
+
 @code {
     private List<EmployeeDto>? employees;
-    private CreateEmployeeDto newEmployee = new()
-    {
-        DepartmentId = 0
-    };
+    private CreateEmployeeDto newEmployee = new();
     private List<DepartmentDto> departments = new();
     private bool showForm = false;
+    private string? errorMessage;
+    private bool isLoading = true;
+
 
     private void ToggleForm()
     {
@@ -107,14 +117,34 @@ else
     }
 
     protected override async Task OnInitializedAsync()
-    {       
+    {
+
         departments = GetDepartments();
-        await GetAll();
+        try
+        {
+            await GetAll();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;            
+        }
     }
 
     private async Task GetAll()
     {
-        employees = (await EmployeeService.GetAllAsync()).ToList();
+        isLoading = true;      
+        try
+        {   
+            employees = (await EmployeeService.GetAllAsync()).ToList();           
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "No se pudo obtener la lista de empleados.";            
+        }
+        finally
+        {
+            isLoading = false;
+        }
     }
 
     private async Task CreateEmployee()
